@@ -1,0 +1,180 @@
+﻿<Window x:Class="WpfDesign.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfDesign"
+        mc:Ignorable="d"
+        Title="iParser" Height="620" Width="950"
+        WindowStyle="None"
+        BorderBrush="Black"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen">
+    <Grid >
+        <!--Header-->
+        <StackPanel Orientation="Vertical" >
+            <Border BorderBrush="#2a2d35" BorderThickness="0,0,0,1">
+                <Grid Background="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60px"></ColumnDefinition>
+                        <ColumnDefinition Width="100px"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="60px"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0" Height="60px">
+                        <Image Source = "D:\Project\WpfDesign\image\header\head-logo.jpg" Height="25px"></Image>
+                    </Grid>
+
+                    <Grid Grid.Column="1" Height="20px" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <Label Content="iParser"  FontSize="16px" Padding="0, 0, 0, 0" BorderThickness="0"></Label>
+                    </Grid>
+
+                    <Grid Grid.Column="4" Height="25px">
+                        <DockPanel Height="25px" Width="55">
+                            <Image Source = "D:\Project\WpfDesign\image\header\min_app.jpg" Width="15px" Height="15px"></Image>
+                            <Image Source = "D:\Project\WpfDesign\image\header\close_app.png" Width="15px" Height="15px" RenderTransformOrigin="0.733,-0.133"></Image>
+                        </DockPanel>
+                    </Grid>
+                </Grid>
+            </Border>
+        </StackPanel>
+        <!--Header-->
+
+        <!--Left Bar-->
+        <StackPanel Orientation="Horizontal">
+            <Grid Margin="0,60px,0,0" Background="#FF1C1F26">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="250"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="60px"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Width="65px">
+                    <DockPanel HorizontalAlignment="Center" Width="65px">
+                        <Border DockPanel.Dock="Top" BorderBrush="#2a2d35" BorderThickness="0,0,0,1">
+                            <Image Source = "D:\Project\WpfDesign\image\leftbar\mp_lb.png" Width="35px" MouseDown="aPicture_MouseDown"  Height="50px" RenderTransformOrigin="0.554,-0.369"></Image>
+                        </Border>
+                        <Border DockPanel.Dock="Top" BorderBrush="#2a2d35" BorderThickness="0,0,0,1">
+                            <Image Source = "D:\Project\WpfDesign\image\leftbar\ep_lb.png" Width="35px" Height="50px" RenderTransformOrigin="0.554,-0.369"></Image>
+                        </Border>
+                        <Border DockPanel.Dock="Top" BorderBrush="#2a2d35" BorderThickness="0,0,0,1">
+                            <Image Source = "D:\Project\WpfDesign\image\leftbar\dp_lb.png" Width="35px" Height="50px" RenderTransformOrigin="0.554,-0.369"></Image>
+                        </Border>
+                    </DockPanel>
+                </Grid>
+
+                <Grid Grid.Row="2" Width="65px">
+                    <DockPanel>
+                        <Border DockPanel.Dock="Top" BorderBrush="#2a2d35" BorderThickness="0,0,0,1">
+                            <Image Source = "D:\Project\WpfDesign\image\leftbar\sp_t.png" Width="20px" Height="50px" RenderTransformOrigin="0.554,-0.369"></Image>
+                        </Border>
+                        <Border DockPanel.Dock="Top" BorderBrush="#2a2d35" BorderThickness="0,0,0,1">
+                            <Image Source = "D:\Project\WpfDesign\image\leftbar\stp_f.png" Width="20px" Height="50px" RenderTransformOrigin="0.554,-0.369"></Image>
+                        </Border>
+                        <Border DockPanel.Dock="Top" BorderBrush="#2a2d35" BorderThickness="0,0,0,1">
+                            <Image Source = "D:\Project\WpfDesign\image\leftbar\cp_f.png" Width="20px" Height="50px" RenderTransformOrigin="0.554,-0.369"></Image>
+                        </Border>
+                        <Border DockPanel.Dock="Top" BorderBrush="#2a2d35" BorderThickness="0,0,0,1">
+                            <Image Source = "D:\Project\WpfDesign\image\leftbar\site_f.png" Width="20px" Height="50px" RenderTransformOrigin="0.554,-0.369"></Image>
+                        </Border>
+                        <Border DockPanel.Dock="Top" BorderBrush="#2a2d35" BorderThickness="0,0,0,0">
+                            <Image Source = "D:\Project\WpfDesign\image\leftbar\ch_f.png" Width="20px" Height="50px" RenderTransformOrigin="0.554,-0.369"></Image>
+                        </Border>
+                    </DockPanel>
+                </Grid>
+
+                <Grid Grid.Row="4" Width="65px">
+                    <Border  BorderThickness="0,0,0,0" Background="#FF353743">
+                        <Image Source = "D:\Project\WpfDesign\image\leftbar\menu.png" Width="60px" Height="50px" RenderTransformOrigin="0.554,-0.369" MouseDown="OpenSett"></Image>
+                    </Border>
+                </Grid>
+            </Grid>
+        </StackPanel>
+        <!--Left Bar-->
+
+        <!--Main Panel-->
+
+        <!--<StackPanel Orientation="Horizontal">
+            <ScrollViewer Margin="65,61,0,0" Width="519">
+                <Grid Background="White">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        --><!--<RowDefinition></RowDefinition>--><!--
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0" Width="520px">
+
+                        <Label FontSize="14px" Content="TEXT"  Margin="15,0,0,0" Height="50px"/>
+                        <Label FontSize="14px" Content="TEXT" Margin="15,50,0,0" Height="50px"/>
+
+                    </Grid>
+
+                    --><!--<Grid Grid.Row="1" Background="#191A1F"></Grid>--><!--
+                </Grid>
+            </ScrollViewer>
+        </StackPanel>-->
+
+        <Grid Margin="65,61,0,0" Width="520px" HorizontalAlignment="Left">
+            <ScrollViewer CanContentScroll="True">
+                <StackPanel>
+                    <Label FontSize="16px" Content="Список проектов (7)" Height="50px"/>
+                    <Label FontSize="14px" Content="01, Название проекта Москва" Height="50px"/>
+                    <Label FontSize="14px" Content="01, Название проекта Москва" Height="50px"/>
+                    <Label FontSize="14px" Content="01, Название проекта Москва" Height="50px"/>
+                    <Label FontSize="14px" Content="01, Название проекта Москва" Height="50px"/>
+                    <Label FontSize="14px" Content="01, Название проекта Москва" Height="50px"/>
+                    <Label FontSize="14px" Content="01, Название проекта Москва" Height="50px"/>
+                    <Label FontSize="14px" Content="01, Название проекта Москва" Height="50px"/>
+                    <Label FontSize="14px" Content="01, Название проекта Москва" Height="50px"/>
+                    <Label FontSize="14px" Content="01, Название проекта Москва" Height="50px"/>
+                    <Label FontSize="14px" Content="01, Название проекта Москва" Height="50px"/>
+                    <Label FontSize="14px" Content="01, Название проекта Москва" Height="50px"/>
+                    <Label FontSize="14px" Content="01, Название проекта Москва" Height="50px"/>
+                    <Label FontSize="14px" Content="01, Название проекта Москва" Height="50px"/>
+                    
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+
+
+        <!--Main Panel-->
+
+
+
+
+        <!--Right Bar-->
+        <StackPanel Orientation="Horizontal">
+            <Border Margin="585px,61px,0,0" BorderBrush="Gray" BorderThickness="1,0,0,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="250px"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="200"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0" Width="356px" Background="White" Margin="20,0,0,0" HorizontalAlignment="Left">
+                        <Label Content="Выполнено:" FontSize="13px"></Label>
+                        <Label Content="Время парсинга:" FontSize="13px" Margin="0,15,0,0"></Label>
+                        <Label Content="Количество компаний:" FontSize="13px" Margin="0,30,0,0"></Label>
+                        <Label Content="Количество городов:" FontSize="13px" Margin="0,45,0,0"></Label>
+                        <Label Content="Количество рубрик:" FontSize="13px" Margin="0,60,0,0"></Label>
+                        <Label Content="Количество компаний с Email:" FontSize="13px" Margin="0,75,0,0"></Label>
+                        <Label Content="Количество сайтов(без Email):" FontSize="13px" Margin="0,90,0,0"></Label>
+                        <Label Content="Выполнено парсинг сайтов:" FontSize="13px" Margin="0,105,0,0"></Label>
+                    </Grid>
+                    <Grid Grid.Row="1" Width="160px" Background="White" Margin="20,0,0,0" HorizontalAlignment="Left">
+                        <Image Source = "D:\Project\WpfDesign\image\ex_f.png" VerticalAlignment = "Top"/>
+                    </Grid>
+                    <Grid Grid.Row="2" Width="290px">
+                        <Image Source = "D:\Project\WpfDesign\image\main_banner.jpg" VerticalAlignment = "Top" Margin = "0,78,0,0"/>
+                    </Grid>
+                </Grid>
+            </Border>
+        </StackPanel>
+        <!--Right Bar-->
+    </Grid>
+</Window>
